@@ -8,7 +8,7 @@ license="AGPL-3.0"
 
     displayName="Dense Mekanism"
     authors="NewJumper"
-    description='''Adding dense-ore variations for Mekanism ores for those lazy miners out there..'''
+    description='''Adds dense-ore variations for Mekanism ores for those lazy miners out there..'''
 
 [[dependencies.densemekanism]]
     modId="minecraft"
@@ -20,4 +20,10 @@ license="AGPL-3.0"
     modId="forge"
     mandatory=true
     versionRange="[43,)"
+    side="BOTH"
+
+[[dependencies.densemekanism]]
+    modId="mekanism"
+    mandatory=true
+    versionRange="[10.3.4,)"
     side="BOTH"
