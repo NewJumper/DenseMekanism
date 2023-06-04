@@ -1,4 +1,4 @@
-// 1.19.2	2023-06-03T19:35:40.0886616	Tags for minecraft:block
+// 1.19.2	2023-06-03T19:43:18.9044341	Tags for minecraft:block
 538d9859b9323a85a1643dbbe08c5bc5c36a398b data/densemekanism/tags/blocks/dense_deepslate_ores.json
 29e597460400a2f01be7c835b05c706d48d83acd data/densemekanism/tags/blocks/dense_stone_ores.json
 f9c7c6ecd9ac8d10390968e06cd46ea617bc61b0 data/forge/tags/blocks/ores.json
@@ -6,3 +6,4 @@ f9c7c6ecd9ac8d10390968e06cd46ea617bc61b0 data/forge/tags/blocks/ores.json
 64831acf93c7725edae19a64127f9ff1a4fc1a1a data/forge/tags/blocks/ores_in_ground/stone.json
 f9c7c6ecd9ac8d10390968e06cd46ea617bc61b0 data/forge/tags/blocks/ore_rates/dense.json
 f9c7c6ecd9ac8d10390968e06cd46ea617bc61b0 data/minecraft/tags/blocks/mineable/pickaxe.json
+f9c7c6ecd9ac8d10390968e06cd46ea617bc61b0 data/minecraft/tags/blocks/needs_stone_tool.json

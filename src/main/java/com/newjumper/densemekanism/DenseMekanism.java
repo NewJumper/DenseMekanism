@@ -6,7 +6,6 @@ import com.newjumper.densemekanism.datagen.assets.DenseMekItemModelProvider;
 import com.newjumper.densemekanism.datagen.assets.ENLanguageProvider;
 import com.newjumper.densemekanism.datagen.data.DenseMekBlockTagsProvider;
 import com.newjumper.densemekanism.datagen.data.DenseMekItemTagsProvider;
-import com.newjumper.densemekanism.datagen.data.DenseMekLootTableProvider;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.data.ExistingFileHelper;

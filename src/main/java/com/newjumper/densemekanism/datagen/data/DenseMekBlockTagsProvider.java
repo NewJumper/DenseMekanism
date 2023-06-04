@@ -18,8 +18,7 @@ public class DenseMekBlockTagsProvider extends BlockTagsProvider {
     @Override
     protected void addTags() {
         tag(BlockTags.MINEABLE_WITH_PICKAXE).addTags(DenseMekanismTags.Blocks.DENSE_STONE_ORES, DenseMekanismTags.Blocks.DENSE_DEEPSLATE_ORES);
-//        tag(BlockTags.NEEDS_STONE_TOOL).add(DenseBlocks.DENSE_IRON_ORE.get(), DenseBlocks.DENSE_DEEPSLATE_IRON_ORE.get(), DenseBlocks.DENSE_COPPER_ORE.get(), DenseBlocks.DENSE_DEEPSLATE_COPPER_ORE.get(), DenseBlocks.DENSE_LAPIS_ORE.get(), DenseBlocks.DENSE_DEEPSLATE_LAPIS_ORE.get());
-//        tag(BlockTags.NEEDS_IRON_TOOL).add(DenseBlocks.DENSE_GOLD_ORE.get(), DenseBlocks.DENSE_DEEPSLATE_GOLD_ORE.get(), DenseBlocks.DENSE_REDSTONE_ORE.get(), DenseBlocks.DENSE_DEEPSLATE_REDSTONE_ORE.get(), DenseBlocks.DENSE_EMERALD_ORE.get(), DenseBlocks.DENSE_DEEPSLATE_EMERALD_ORE.get(), DenseBlocks.DENSE_DIAMOND_ORE.get(), DenseBlocks.DENSE_DEEPSLATE_DIAMOND_ORE.get());
+        tag(BlockTags.NEEDS_STONE_TOOL).addTags(DenseMekanismTags.Blocks.DENSE_STONE_ORES, DenseMekanismTags.Blocks.DENSE_DEEPSLATE_ORES);
 
         tag(Tags.Blocks.ORES).addTags(DenseMekanismTags.Blocks.DENSE_STONE_ORES, DenseMekanismTags.Blocks.DENSE_DEEPSLATE_ORES);
         tag(Tags.Blocks.ORE_RATES_DENSE).addTags(DenseMekanismTags.Blocks.DENSE_STONE_ORES, DenseMekanismTags.Blocks.DENSE_DEEPSLATE_ORES);

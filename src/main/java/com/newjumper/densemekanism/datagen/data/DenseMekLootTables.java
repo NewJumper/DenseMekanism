@@ -1,6 +1,5 @@
 package com.newjumper.densemekanism.datagen.data;
 
-import com.newjumper.densemekanism.content.DenseBlocks;
 import net.minecraft.data.loot.BlockLoot;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.enchantment.Enchantments;
