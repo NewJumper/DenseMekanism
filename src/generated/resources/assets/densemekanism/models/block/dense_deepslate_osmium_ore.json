@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "densemekanism:block/dense_deepslate_osmium_ore"
+  }
+}
