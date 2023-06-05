@@ -6,6 +6,8 @@ import com.newjumper.densemekanism.datagen.assets.DenseMekItemModelProvider;
 import com.newjumper.densemekanism.datagen.assets.ENLanguageProvider;
 import com.newjumper.densemekanism.datagen.data.DenseMekBlockTagsProvider;
 import com.newjumper.densemekanism.datagen.data.DenseMekItemTagsProvider;
+import com.newjumper.densemekanism.world.DenseConfiguredFeatures;
+import com.newjumper.densemekanism.world.DensePlacedFeatures;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -22,8 +24,8 @@ public class DenseMekanism {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         DenseBlocks.BLOCKS.register(eventBus);
-//        DenseConfiguredFeatures.CONFIGURED_FEATURES.register(eventBus);
-//        DensePlacedFeatures.PLACED_FEATURES.register(eventBus);
+        DenseConfiguredFeatures.CONFIGURED_FEATURES.register(eventBus);
+        DensePlacedFeatures.PLACED_FEATURES.register(eventBus);
         DenseBlocks.ITEMS.register(eventBus);
 
         eventBus.addListener(this::generateData);
