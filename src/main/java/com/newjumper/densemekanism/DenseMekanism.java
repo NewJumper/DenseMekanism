@@ -6,6 +6,8 @@ import com.newjumper.densemekanism.datagen.assets.DenseMekItemModelProvider;
 import com.newjumper.densemekanism.datagen.assets.ENLanguageProvider;
 import com.newjumper.densemekanism.datagen.data.DenseMekBlockTagsProvider;
 import com.newjumper.densemekanism.datagen.data.DenseMekItemTagsProvider;
+import com.newjumper.densemekanism.datagen.data.DenseMekLootTableProvider;
+import com.newjumper.densemekanism.datagen.data.SmeltingRecipesProvider;
 import com.newjumper.densemekanism.world.DenseConfiguredFeatures;
 import com.newjumper.densemekanism.world.DensePlacedFeatures;
 import net.minecraft.data.DataGenerator;
@@ -46,6 +48,7 @@ public class DenseMekanism {
         generator.addProvider(event.includeServer(), blockTags);
         generator.addProvider(event.includeServer(), new DenseMekItemTagsProvider(generator, blockTags, fileHelper));
 
-//        generator.addProvider(event.includeServer(), new DenseMekLootTableProvider(generator));
+        generator.addProvider(event.includeServer(), new DenseMekLootTableProvider(generator));
+        generator.addProvider(event.includeServer(), new SmeltingRecipesProvider(generator));
     }
 }

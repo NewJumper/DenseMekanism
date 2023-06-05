@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:blasting",
+  "cookingtime": 100,
+  "experience": 1.6,
+  "group": "osmium_ingot",
+  "ingredient": {
+    "item": "densemekanism:dense_deepslate_osmium_ore"
+  },
+  "result": "mekanism:raw_osmium"
+}

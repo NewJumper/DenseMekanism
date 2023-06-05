@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:blasting",
+  "cookingtime": 100,
+  "experience": 1.6,
+  "group": "fluorite_gem",
+  "ingredient": {
+    "item": "densemekanism:dense_deepslate_fluorite_ore"
+  },
+  "result": "mekanism:fluorite_gem"
+}
