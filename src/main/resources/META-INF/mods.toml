@@ -1,29 +1,29 @@
 modLoader="javafml"
-loaderVersion="[43,)"
-license="AGPL-3.0"
+loaderVersion="[43,44)"
+license="MIT"
 
 [[mods]]
     modId="densemekanism"
-    version="0.1.0"
+    version="1.0.0"
 
     displayName="Dense Mekanism"
     authors="NewJumper"
-    description='''Adds dense-ore variations for Mekanism ores for those lazy miners out there..'''
+    description='''Adds dense ores for Mekanism ores.'''
 
 [[dependencies.densemekanism]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.19.2, 1.20)"
+    versionRange="[1.19.2, 1.19.3)"
     side="BOTH"
 
 [[dependencies.densemekanism]]
     modId="forge"
     mandatory=true
-    versionRange="[43,)"
+    versionRange="[43,44)"
     side="BOTH"
 
 [[dependencies.densemekanism]]
     modId="mekanism"
     mandatory=true
-    versionRange="[10.3.4,)"
+    versionRange="[10.3.8,)"
     side="BOTH"
