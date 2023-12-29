@@ -15,16 +15,16 @@ public class DenseMekanismCreativeTab {
 
     public static void buildCreativeTab(BuildCreativeModeTabContentsEvent event) {
         if(event.getTab() == DENSE_MEKANISM.get()) {
+            event.accept(DenseBlocks.DENSE_TIN_ORE);
+            event.accept(DenseBlocks.DENSE_DEEPSLATE_TIN_ORE);
+            event.accept(DenseBlocks.DENSE_OSMIUM_ORE);
+            event.accept(DenseBlocks.DENSE_DEEPSLATE_OSMIUM_ORE);
+            event.accept(DenseBlocks.DENSE_URANIUM_ORE);
+            event.accept(DenseBlocks.DENSE_DEEPSLATE_URANIUM_ORE);
             event.accept(DenseBlocks.DENSE_FLUORITE_ORE);
             event.accept(DenseBlocks.DENSE_DEEPSLATE_FLUORITE_ORE);
             event.accept(DenseBlocks.DENSE_LEAD_ORE);
             event.accept(DenseBlocks.DENSE_DEEPSLATE_LEAD_ORE);
-            event.accept(DenseBlocks.DENSE_OSMIUM_ORE);
-            event.accept(DenseBlocks.DENSE_DEEPSLATE_OSMIUM_ORE);
-            event.accept(DenseBlocks.DENSE_TIN_ORE);
-            event.accept(DenseBlocks.DENSE_DEEPSLATE_TIN_ORE);
-            event.accept(DenseBlocks.DENSE_URANIUM_ORE);
-            event.accept(DenseBlocks.DENSE_DEEPSLATE_URANIUM_ORE);
         }
     }
 }
