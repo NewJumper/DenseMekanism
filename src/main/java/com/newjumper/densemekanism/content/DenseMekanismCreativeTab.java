@@ -11,7 +11,7 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class DenseMekanismCreativeTab {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, DenseMekanism.MOD_ID);
-    public static final RegistryObject<CreativeModeTab> DENSE_MEKANISM = CREATIVE_MODE_TABS.register("deeper_darker", () -> CreativeModeTab.builder().title(Component.translatable("itemGroup." + DenseMekanism.MOD_ID)).icon(() -> new ItemStack(DenseBlocks.DENSE_FLUORITE_ORE.get())).build());
+    public static final RegistryObject<CreativeModeTab> DENSE_MEKANISM = CREATIVE_MODE_TABS.register("dense_mekanism", () -> CreativeModeTab.builder().title(Component.translatable("itemGroup." + DenseMekanism.MOD_ID)).icon(() -> new ItemStack(DenseBlocks.DENSE_FLUORITE_ORE.get())).build());
 
     public static void buildCreativeTab(BuildCreativeModeTabContentsEvent event) {
         if(event.getTab() == DENSE_MEKANISM.get()) {
