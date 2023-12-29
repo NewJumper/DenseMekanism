@@ -2,13 +2,13 @@ package com.newjumper.densemekanism.datagen.assets;
 
 import com.newjumper.densemekanism.DenseMekanism;
 import com.newjumper.densemekanism.content.DenseBlocks;
-import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
 public class DenseMekBlockStateProvider extends BlockStateProvider {
-    public DenseMekBlockStateProvider(DataGenerator gen, ExistingFileHelper exFileHelper) {
-        super(gen, DenseMekanism.MOD_ID, exFileHelper);
+    public DenseMekBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
+        super(output, DenseMekanism.MOD_ID, exFileHelper);
     }
 
     @Override

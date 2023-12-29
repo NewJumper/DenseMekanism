@@ -1,16 +1,13 @@
 package com.newjumper.densemekanism;
 
 import com.newjumper.densemekanism.content.DenseBlocks;
+import com.newjumper.densemekanism.content.DenseMekanismCreativeTab;
 import com.newjumper.densemekanism.datagen.assets.DenseMekBlockStateProvider;
 import com.newjumper.densemekanism.datagen.assets.DenseMekItemModelProvider;
 import com.newjumper.densemekanism.datagen.assets.ENLanguageProvider;
-import com.newjumper.densemekanism.datagen.data.DenseMekBlockTagsProvider;
-import com.newjumper.densemekanism.datagen.data.DenseMekItemTagsProvider;
-import com.newjumper.densemekanism.datagen.data.DenseMekLootTableProvider;
-import com.newjumper.densemekanism.datagen.data.SmeltingRecipesProvider;
-import com.newjumper.densemekanism.world.DenseConfiguredFeatures;
-import com.newjumper.densemekanism.world.DensePlacedFeatures;
+import com.newjumper.densemekanism.datagen.data.*;
 import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.data.event.GatherDataEvent;
@@ -25,30 +22,32 @@ public class DenseMekanism {
     public DenseMekanism() {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        DenseMekanismCreativeTab.CREATIVE_MODE_TABS.register(eventBus);
         DenseBlocks.BLOCKS.register(eventBus);
-        DenseConfiguredFeatures.CONFIGURED_FEATURES.register(eventBus);
-        DensePlacedFeatures.PLACED_FEATURES.register(eventBus);
         DenseBlocks.ITEMS.register(eventBus);
 
-        eventBus.addListener(this::generateData);
         MinecraftForge.EVENT_BUS.register(this);
+        eventBus.addListener(DenseMekanismCreativeTab::buildCreativeTab);
+        eventBus.addListener(this::generateData);
     }
 
     public void generateData(final GatherDataEvent event) {
         DataGenerator generator = event.getGenerator();
+        PackOutput packOutput = generator.getPackOutput();
         ExistingFileHelper fileHelper = event.getExistingFileHelper();
 
         // assets
-        generator.addProvider(event.includeClient(), new DenseMekBlockStateProvider(generator, fileHelper));
-        generator.addProvider(event.includeClient(), new DenseMekItemModelProvider(generator, fileHelper));
-        generator.addProvider(event.includeClient(), new ENLanguageProvider(generator));
+        generator.addProvider(event.includeClient(), new DenseMekBlockStateProvider(packOutput, fileHelper));
+        generator.addProvider(event.includeClient(), new DenseMekItemModelProvider(packOutput, fileHelper));
+        generator.addProvider(event.includeClient(), new ENLanguageProvider(packOutput));
 
         // data
-        DenseMekBlockTagsProvider blockTags = new DenseMekBlockTagsProvider(generator, fileHelper);
+        DenseMekBlockTagsProvider blockTags = new DenseMekBlockTagsProvider(packOutput, event.getLookupProvider(), fileHelper);
         generator.addProvider(event.includeServer(), blockTags);
-        generator.addProvider(event.includeServer(), new DenseMekItemTagsProvider(generator, blockTags, fileHelper));
+        generator.addProvider(event.includeServer(), new DenseMekItemTagsProvider(packOutput, event.getLookupProvider(), blockTags, fileHelper));
 
-        generator.addProvider(event.includeServer(), new DenseMekLootTableProvider(generator));
-        generator.addProvider(event.includeServer(), new SmeltingRecipesProvider(generator));
+        generator.addProvider(event.includeServer(), new DenseMekRegistriesGenerator(packOutput, event.getLookupProvider()));
+        generator.addProvider(event.includeServer(), new DenseMekLootTableProvider(packOutput));
+        generator.addProvider(event.includeServer(), new SmeltingRecipesProvider(packOutput));
     }
 }

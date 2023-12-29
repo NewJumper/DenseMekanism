@@ -3,20 +3,24 @@ package com.newjumper.densemekanism.datagen.data;
 import com.newjumper.densemekanism.DenseMekanism;
 import com.newjumper.densemekanism.content.DenseBlocks;
 import com.newjumper.densemekanism.content.DenseMekanismTags;
-import net.minecraft.data.DataGenerator;
-import net.minecraft.data.tags.BlockTagsProvider;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
 import net.minecraftforge.common.Tags;
+import net.minecraftforge.common.data.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import org.jetbrains.annotations.NotNull;
+
+import java.util.concurrent.CompletableFuture;
 
 public class DenseMekBlockTagsProvider extends BlockTagsProvider {
-    public DenseMekBlockTagsProvider(DataGenerator gen, ExistingFileHelper exFileHelper) {
-        super(gen, DenseMekanism.MOD_ID, exFileHelper);
+    public DenseMekBlockTagsProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider, ExistingFileHelper existingFileHelper) {
+        super(output, lookupProvider, DenseMekanism.MOD_ID, existingFileHelper);
     }
 
     @SuppressWarnings("unchecked")
     @Override
-    protected void addTags() {
+    protected void addTags(HolderLookup.@NotNull Provider pProvider) {
         tag(BlockTags.MINEABLE_WITH_PICKAXE).addTags(DenseMekanismTags.Blocks.DENSE_STONE_ORES, DenseMekanismTags.Blocks.DENSE_DEEPSLATE_ORES);
         tag(BlockTags.NEEDS_STONE_TOOL).addTags(DenseMekanismTags.Blocks.DENSE_STONE_ORES, DenseMekanismTags.Blocks.DENSE_DEEPSLATE_ORES);
 

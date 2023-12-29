@@ -57,5 +57,6 @@
       ],
       "rolls": 1.0
     }
-  ]
+  ],
+  "random_sequence": "densemekanism:blocks/dense_deepslate_lead_ore"
 }
