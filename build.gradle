@@ -43,10 +43,14 @@ configurations { runtimeClasspath.extendsFrom localRuntime }
 
 repositories {
     mavenLocal()
+    maven { url 'https://modmaven.dev' }
 }
 
 dependencies {
     implementation "net.neoforged:neoforge:${neo_version}"
+
+    compileOnly "mekanism:Mekanism:${minecraft_version}-${mekanism_version}:api"
+    runtimeOnly "mekanism:Mekanism:${minecraft_version}-${mekanism_version}"
 }
 
 tasks.withType(ProcessResources).configureEach {
