@@ -3,7 +3,7 @@ package com.newjumper.densemekanism.world;
 import com.newjumper.densemekanism.DenseMekanism;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.data.worldgen.BootstapContext;
+import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
@@ -14,18 +14,18 @@ import net.minecraft.world.level.levelgen.placement.*;
 import java.util.List;
 
 public class DensePlacedFeatures {
-    public static final ResourceKey<PlacedFeature> DENSE_FLUORITE = createKey("dense_fluorite");
-    public static final ResourceKey<PlacedFeature> DENSE_FLUORITE_BURIED = createKey("dense_fluorite_buried");
-    public static final ResourceKey<PlacedFeature> DENSE_LEAD = createKey("dense_lead");
-    public static final ResourceKey<PlacedFeature> DENSE_OSMIUM_UPPER = createKey("dense_osmium_upper");
-    public static final ResourceKey<PlacedFeature> DENSE_OSMIUM_MIDDLE = createKey("dense_osmium_middle");
-    public static final ResourceKey<PlacedFeature> DENSE_OSMIUM_SMALL = createKey("dense_osmium_small");
-    public static final ResourceKey<PlacedFeature> DENSE_TIN_SMALL = createKey("dense_tin_small");
-    public static final ResourceKey<PlacedFeature> DENSE_TIN_LARGE = createKey("dense_tin_large");
-    public static final ResourceKey<PlacedFeature> DENSE_URANIUM_BURIED = createKey("dense_uranium_buried");
-    public static final ResourceKey<PlacedFeature> DENSE_URANIUM_SMALL = createKey("dense_uranium_small");
+    public static final ResourceKey<PlacedFeature> DENSE_FLUORITE = create("dense_fluorite");
+    public static final ResourceKey<PlacedFeature> DENSE_FLUORITE_BURIED = create("dense_fluorite_buried");
+    public static final ResourceKey<PlacedFeature> DENSE_LEAD = create("dense_lead");
+    public static final ResourceKey<PlacedFeature> DENSE_OSMIUM_UPPER = create("dense_osmium_upper");
+    public static final ResourceKey<PlacedFeature> DENSE_OSMIUM_MIDDLE = create("dense_osmium_middle");
+    public static final ResourceKey<PlacedFeature> DENSE_OSMIUM_SMALL = create("dense_osmium_small");
+    public static final ResourceKey<PlacedFeature> DENSE_TIN_SMALL = create("dense_tin_small");
+    public static final ResourceKey<PlacedFeature> DENSE_TIN_LARGE = create("dense_tin_large");
+    public static final ResourceKey<PlacedFeature> DENSE_URANIUM_BURIED = create("dense_uranium_buried");
+    public static final ResourceKey<PlacedFeature> DENSE_URANIUM_SMALL = create("dense_uranium_small");
 
-    public static void bootstrap(BootstapContext<PlacedFeature> context) {
+    public static void bootstrap(BootstrapContext<PlacedFeature> context) {
         HolderGetter<ConfiguredFeature<?, ?>> features = context.lookup(Registries.CONFIGURED_FEATURE);
 
         PlacementUtils.register(context, DENSE_FLUORITE, features.getOrThrow(DenseConfiguredFeatures.ORE_DENSE_FLUORITE), countPlacement(5, HeightRangePlacement.uniform(VerticalAnchor.bottom(), VerticalAnchor.absolute(23))));
@@ -44,7 +44,7 @@ public class DensePlacedFeatures {
         return List.of(CountPlacement.of(attempts), InSquarePlacement.spread(), heightRange, BiomeFilter.biome());
     }
 
-    private static ResourceKey<PlacedFeature> createKey(String name) {
-        return ResourceKey.create(Registries.PLACED_FEATURE, new ResourceLocation(DenseMekanism.MOD_ID, name));
+    private static ResourceKey<PlacedFeature> create(String name) {
+        return ResourceKey.create(Registries.PLACED_FEATURE, ResourceLocation.fromNamespaceAndPath(DenseMekanism.MOD_ID, name));
     }
 }

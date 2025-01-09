@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 1.6,
+  "group": "tin_ingot",
+  "ingredient": {
+    "item": "densemekanism:dense_tin_ore"
+  },
+  "result": {
+    "count": 1,
+    "id": "mekanism:raw_tin"
+  }
+}

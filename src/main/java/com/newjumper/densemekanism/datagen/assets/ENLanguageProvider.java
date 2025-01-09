@@ -3,9 +3,8 @@ package com.newjumper.densemekanism.datagen.assets;
 import com.newjumper.densemekanism.DenseMekanism;
 import com.newjumper.densemekanism.content.DenseBlocks;
 import net.minecraft.data.PackOutput;
-import net.minecraft.world.level.block.Block;
-import net.minecraftforge.common.data.LanguageProvider;
-import net.minecraftforge.registries.RegistryObject;
+import net.neoforged.neoforge.common.data.LanguageProvider;
+import net.neoforged.neoforge.registries.DeferredHolder;
 
 public class ENLanguageProvider extends LanguageProvider {
     public ENLanguageProvider(PackOutput output) {
@@ -18,7 +17,7 @@ public class ENLanguageProvider extends LanguageProvider {
         add("itemGroup." + DenseMekanism.MOD_ID, "Dense Mekanism");
     }
 
-    private void addBlock(RegistryObject<Block> block) {
+    private void addBlock(DeferredHolder<?, ?> block) {
         String key = block.getId().getPath();
         add("block." + DenseMekanism.MOD_ID + "." + key, convertToName(key));
     }

@@ -4,9 +4,9 @@ import com.newjumper.densemekanism.DenseMekanism;
 import com.newjumper.densemekanism.content.DenseBlocks;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.level.block.Block;
-import net.minecraftforge.client.model.generators.ItemModelProvider;
-import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.registries.RegistryObject;
+import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
+import net.neoforged.neoforge.common.data.ExistingFileHelper;
+import net.neoforged.neoforge.registries.DeferredBlock;
 
 public class DenseMekItemModelProvider extends ItemModelProvider {
     public DenseMekItemModelProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
@@ -27,7 +27,7 @@ public class DenseMekItemModelProvider extends ItemModelProvider {
         blockModel(DenseBlocks.DENSE_DEEPSLATE_URANIUM_ORE);
     }
 
-    public void blockModel(RegistryObject<Block> block) {
+    public void blockModel(DeferredBlock<Block> block) {
         withExistingParent(block.getId().getPath(), modLoc("block/" + block.getId().getPath()));
     }
 }

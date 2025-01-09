@@ -1,6 +1,0 @@
-{
-  "type": "forge:add_features",
-  "biomes": "#minecraft:is_overworld",
-  "features": "densemekanism:dense_tin_large",
-  "step": "underground_ores"
-}

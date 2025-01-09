@@ -14,7 +14,7 @@ public class DenseMekanismTags {
         public static final TagKey<Block> DENSE_DEEPSLATE_ORES = tag("dense_deepslate_ores");
 
         private static TagKey<Block> tag(String name) {
-            return BlockTags.create(new ResourceLocation(DenseMekanism.MOD_ID, name));
+            return BlockTags.create(ResourceLocation.fromNamespaceAndPath(DenseMekanism.MOD_ID, name));
         }
     }
 
@@ -23,7 +23,7 @@ public class DenseMekanismTags {
         public static final TagKey<Item> DENSE_DEEPSLATE_ORES = tag("dense_deepslate_ores");
 
         private static TagKey<Item> tag(String name) {
-            return ItemTags.create(new ResourceLocation(DenseMekanism.MOD_ID, name));
+            return ItemTags.create(ResourceLocation.fromNamespaceAndPath(DenseMekanism.MOD_ID, name));
         }
     }
 }
