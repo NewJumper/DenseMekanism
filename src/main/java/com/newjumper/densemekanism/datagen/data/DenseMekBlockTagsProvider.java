@@ -31,5 +31,11 @@ public class DenseMekBlockTagsProvider extends BlockTagsProvider {
 
         tag(DenseMekanismTags.Blocks.DENSE_STONE_ORES).add(DenseBlocks.DENSE_FLUORITE_ORE.get(), DenseBlocks.DENSE_LEAD_ORE.get(), DenseBlocks.DENSE_OSMIUM_ORE.get(), DenseBlocks.DENSE_TIN_ORE.get(), DenseBlocks.DENSE_URANIUM_ORE.get());
         tag(DenseMekanismTags.Blocks.DENSE_DEEPSLATE_ORES).add(DenseBlocks.DENSE_DEEPSLATE_FLUORITE_ORE.get(), DenseBlocks.DENSE_DEEPSLATE_LEAD_ORE.get(), DenseBlocks.DENSE_DEEPSLATE_OSMIUM_ORE.get(), DenseBlocks.DENSE_DEEPSLATE_TIN_ORE.get(), DenseBlocks.DENSE_DEEPSLATE_URANIUM_ORE.get());
+
+        tag(DenseMekanismTags.Blocks.FLUORITE_ORES).add(DenseBlocks.DENSE_FLUORITE_ORE.get(), DenseBlocks.DENSE_DEEPSLATE_FLUORITE_ORE.get());
+        tag(DenseMekanismTags.Blocks.LEAD_ORES).add(DenseBlocks.DENSE_LEAD_ORE.get(), DenseBlocks.DENSE_DEEPSLATE_LEAD_ORE.get());
+        tag(DenseMekanismTags.Blocks.OSMIUM_ORES).add(DenseBlocks.DENSE_OSMIUM_ORE.get(), DenseBlocks.DENSE_DEEPSLATE_OSMIUM_ORE.get());
+        tag(DenseMekanismTags.Blocks.TIN_ORES).add(DenseBlocks.DENSE_TIN_ORE.get(), DenseBlocks.DENSE_DEEPSLATE_TIN_ORE.get());
+        tag(DenseMekanismTags.Blocks.URANIUM_ORES).add(DenseBlocks.DENSE_URANIUM_ORE.get(), DenseBlocks.DENSE_DEEPSLATE_URANIUM_ORE.get());
     }
 }

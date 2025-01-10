@@ -27,5 +27,11 @@ public class DenseMekItemTagsProvider extends ItemTagsProvider {
 
         copy(DenseMekanismTags.Blocks.DENSE_STONE_ORES, DenseMekanismTags.Items.DENSE_STONE_ORES);
         copy(DenseMekanismTags.Blocks.DENSE_DEEPSLATE_ORES, DenseMekanismTags.Items.DENSE_DEEPSLATE_ORES);
+
+        copy(DenseMekanismTags.Blocks.FLUORITE_ORES, DenseMekanismTags.Items.FLUORITE_ORES);
+        copy(DenseMekanismTags.Blocks.LEAD_ORES, DenseMekanismTags.Items.LEAD_ORES);
+        copy(DenseMekanismTags.Blocks.OSMIUM_ORES, DenseMekanismTags.Items.OSMIUM_ORES);
+        copy(DenseMekanismTags.Blocks.TIN_ORES, DenseMekanismTags.Items.TIN_ORES);
+        copy(DenseMekanismTags.Blocks.URANIUM_ORES, DenseMekanismTags.Items.URANIUM_ORES);
     }
 }

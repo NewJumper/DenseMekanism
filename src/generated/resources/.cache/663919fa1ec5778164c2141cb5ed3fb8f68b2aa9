@@ -1,5 +1,10 @@
-// 1.21.1	2025-01-09T17:08:31.2880356	Tags for minecraft:block mod id densemekanism
+// 1.21.1	2025-01-09T17:58:47.6537325	Tags for minecraft:block mod id densemekanism
 f9c7c6ecd9ac8d10390968e06cd46ea617bc61b0 data/c/tags/block/ores.json
+49cdb5da4bd75f60f36df6add57110b55f79d721 data/c/tags/block/ores/fluorite.json
+9051547ac83e3040ed24239ae33928294498f16d data/c/tags/block/ores/lead.json
+7ac89e0d01e0f0550261609dadb43152b17cc402 data/c/tags/block/ores/osmium.json
+541c78918b6dc60be18ba496e3d97116df813091 data/c/tags/block/ores/tin.json
+8a9131c3477852b16b43a373e3a7adb1602b4bb1 data/c/tags/block/ores/uranium.json
 9590655b779bbbae743f617295aa7e263dbfa4b8 data/c/tags/block/ores_in_ground/deepslate.json
 64831acf93c7725edae19a64127f9ff1a4fc1a1a data/c/tags/block/ores_in_ground/stone.json
 f9c7c6ecd9ac8d10390968e06cd46ea617bc61b0 data/c/tags/block/ore_rates/dense.json

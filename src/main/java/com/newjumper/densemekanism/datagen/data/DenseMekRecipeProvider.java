@@ -20,14 +20,14 @@ import org.jetbrains.annotations.NotNull;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
-public class SmeltingRecipesProvider extends RecipeProvider implements IConditionBuilder {
+public class DenseMekRecipeProvider extends RecipeProvider implements IConditionBuilder {
     private static final ImmutableList<ItemLike> DENSE_FLUORITE_ORES = ImmutableList.of(DenseBlocks.DENSE_FLUORITE_ORE.get(), DenseBlocks.DENSE_DEEPSLATE_FLUORITE_ORE.get());
     private static final ImmutableList<ItemLike> DENSE_LEAD_ORES = ImmutableList.of(DenseBlocks.DENSE_LEAD_ORE.get(), DenseBlocks.DENSE_DEEPSLATE_LEAD_ORE.get());
     private static final ImmutableList<ItemLike> DENSE_OSMIUM_ORES = ImmutableList.of(DenseBlocks.DENSE_OSMIUM_ORE.get(), DenseBlocks.DENSE_DEEPSLATE_OSMIUM_ORE.get());
     private static final ImmutableList<ItemLike> DENSE_TIN_ORES = ImmutableList.of(DenseBlocks.DENSE_TIN_ORE.get(), DenseBlocks.DENSE_DEEPSLATE_TIN_ORE.get());
     private static final ImmutableList<ItemLike> DENSE_URANIUM_ORES = ImmutableList.of(DenseBlocks.DENSE_URANIUM_ORE.get(), DenseBlocks.DENSE_DEEPSLATE_URANIUM_ORE.get());
 
-    public SmeltingRecipesProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
+    public DenseMekRecipeProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
         super(output, registries);
     }
 

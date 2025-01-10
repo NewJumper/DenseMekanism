@@ -47,6 +47,6 @@ public class DenseMekanism {
 
         generator.addProvider(event.includeServer(), new DenseMekRegistriesGenerator(output, lookup));
         generator.addProvider(event.includeServer(), new DenseMekLootTableProvider(output, lookup));
-        generator.addProvider(event.includeServer(), new SmeltingRecipesProvider(output, lookup));
+        generator.addProvider(event.includeServer(), new DenseMekRecipeProvider(output, lookup));
     }
 }
